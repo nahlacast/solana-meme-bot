@@ -1,0 +1,5 @@
+requests
+solana
+solders
+anchorpy
+python-dotenv

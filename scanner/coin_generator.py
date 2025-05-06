@@ -1,0 +1,1 @@
+# Placeholder for coin_generator.py
