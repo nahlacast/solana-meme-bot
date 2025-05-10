@@ -43,12 +43,12 @@ def run_autonomous_trader():
         print(f"📈 Executing trade for 0.2 SOL of {token['symbol']}")
         # Here you'd replace with a real call like: jupiter_client.execute_trade(...)
 
-# Loop through tokens and simulate trades only on safe ones
-for token in tokens:
-    if not scan_token(token):
-        continue
+    # Loop through tokens and simulate trades only on safe ones
+    for token in tokens:
+        if not scan_token(token):
+            continue
 
-    print(f"🤖 Simulated trade: BUY 0.2 SOL of {token['symbol']}")
+        print(f"🤖 Simulated trade: BUY 0.2 SOL of {token['symbol']}")
 
 def run_autonomous_trader():
     tokens = [
