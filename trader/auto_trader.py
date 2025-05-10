@@ -3,9 +3,6 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'scanner')))
-
-from meme_coin_scanner import scan_token
-
 import requests
 from scanner.meme_coin_scanner import scan_token
 
@@ -48,28 +45,4 @@ def run_autonomous_trader():
         if not scan_token(token):
             continue
 
-        print(f"🤖 Simulated trade: BUY 0.2 SOL of {token['symbol']}")
-
-def run_autonomous_trader():
-    tokens = [
-        {
-            "symbol": "$WAGMI",
-            "liquidity": 0.9,
-            "creator_hold_percent": 80,
-            "mintable": True,
-            "freeze_authority": True
-        },
-        {
-            "symbol": "$REAL1",
-            "liquidity": 8.2,
-            "creator_hold_percent": 32,
-            "mintable": False,
-            "freeze_authority": None
-        },
-        # Add more tokens here or fetch live ones
-    ]
-
-    for token in tokens:
-        if not scan_token(token):
-            continue
         print(f"🤖 Simulated trade: BUY 0.2 SOL of {token['symbol']}")
